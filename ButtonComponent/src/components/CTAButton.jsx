@@ -6,7 +6,7 @@ import { IoBagHandleSharp } from "react-icons/io5";
 
 function CTAButton({text}) {
   return (
-         <div className='flex justify-center gap-10 cursor-pointer'>
+         <div className='flex justify-center flex-wrap gap-10 cursor-pointer'>
         <button className='px-4 py-2 rounded-md font-sm bg-gray-100 text-black hover:bg-gray-200 flex' type="button">{text} <span className='py-1 pl-2'><FaCartShopping /></span></button>
 
        
