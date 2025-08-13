@@ -9,6 +9,9 @@ import DropdownButton from './components/DropdownButton'
 import FloatingActionButton from './components/FloatingActionButton'
 import HamburgerButton from './components/HamburgerButton'
 import PlusButton from './components/PlusButton'
+import ExpendableButton from './components/ExpendableButton'
+import SharedButton from './components/SharedButton'
+import RaisedButton from './components/RaisedButton'
 
 function App() {
 
@@ -41,24 +44,39 @@ function App() {
         <ToggleButton />
       </div>
 
-     <div className='text-center'>
+      <div className='text-center'>
         <h6 className='uppercase m-4 underline'>Dropdown Button</h6>
         <DropdownButton />
       </div>
 
-<div className='text-center'>
+      <div className='text-center'>
         <h6 className='uppercase m-4 underline'>Floating Action Button</h6>
-        <FloatingActionButton/>
+        <FloatingActionButton />
       </div>
 
-<div className='text-center'>
+      <div className='text-center'>
         <h6 className='uppercase m-4 underline'>Hamburger Button</h6>
-        <HamburgerButton/>
+        <HamburgerButton />
       </div>
 
-<div className='text-center'>
+      <div className='text-center'>
         <h6 className='uppercase m-4 underline'>Plus Button</h6>
-        <PlusButton/>
+        <PlusButton />
+      </div>
+
+      <div className='text-center'>
+        <h6 className='uppercase m-4 underline'>Expandable Button</h6>
+        <ExpendableButton />
+      </div>
+
+        <div className='text-center'>
+        <h6 className='uppercase m-4 underline'>Shared Button</h6>
+        <SharedButton />
+      </div>
+
+      <div className='text-center'>
+        <h6 className='uppercase m-4 underline'>Raised Buttons</h6>
+        <RaisedButton />
       </div>
 
     </>
