@@ -11,7 +11,7 @@ function App() {
       <div>
         <h1 className='text-center text-2xl'>Media Card</h1>
         <p className='text-center text-gray-400'>Example of a card using an image to reinforce the content.</p>
-        <MediaCard />
+        <MediaCard img={"https://w0.peakpx.com/wallpaper/162/188/HD-wallpaper-iguana-green-rare-gallery.jpg"} text={"Lizard"} paragraph={"Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"} />
       </div>
     </>
   )
