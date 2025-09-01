@@ -2,67 +2,89 @@ import React, { useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const BasicPagination = () => {
-  const [activePage, setActivePage] = useState(1);
-  const totalPages = 5;
+  const totalPages = 10;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const changePage = (page) => {
-    if (page < 1 || page > totalPages) return;
-    setActivePage(page);
+  // Function to handle page change
+  const handlePageClick = (page) => {
+    if (page === '...') return;
+    setCurrentPage(page);
   };
 
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  // Generate visible pages (1 2 3 4 5 ... 10)
+  const generatePages = () => {
+    if (totalPages <= 6) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    const pages = [1];
+
+    if (currentPage <= 4) {
+      pages.push(2, 3, 4, 5, '...', totalPages);
+    } else if (currentPage >= totalPages - 3) {
+      pages.push('...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+    } else {
+      pages.push('...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+    }
+
+    return pages;
+  };
+
+  const pages = generatePages();
+
   return (
-      <div className="min-h-[300px] bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 flex flex-wrap gap-6 items-center justify-center p-8 cursor-pointer">
-      {/* Previous Button */}
-      <button
-        onClick={() => changePage(activePage - 1)}
-        disabled={activePage === 1}
-        className={`flex items-center gap-2 px-3 py-1 rounded-md border text-sm ${
-          activePage === 1
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-            : 'hover:bg-gray-200 text-gray-700'
-        }`}
-      >
-        <FiChevronLeft className="h-4 w-4" />
-        Previous
-      </button>
+    <div className="min-h-[300px] bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 flex flex-wrap gap-6 items-center justify-center p-8 cursor-pointer">
+      <div className="flex space-x-1 items-center">
+        {/* Left Arrow */}
+        <button
+          onClick={handlePrev}
+          disabled={currentPage === 1}
+          className={`p-2 rounded ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-black hover:bg-gray-200'}`}
+        >
+          <FiChevronLeft size={20} />
+        </button>
 
-      {/* Page Numbers */}
-      <div className="flex items-center gap-2">
-        {[...Array(totalPages)].map((_, index) => {
-          const page = index + 1;
-          return (
-            <button
-              key={page}
-              onClick={() => changePage(page)}
-              className={`w-9 h-9 text-sm rounded-md border ${
-                activePage === page
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-700 hover:bg-gray-200'
+        {/* Page Numbers */}
+        {pages.map((page, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageClick(page)}
+            className={`px-3 py-1 rounded-full text-sm transition
+              ${
+                page === currentPage
+                  ? 'bg-gray-300 text-black cursor-default'
+                  : page === '...'
+                  ? 'text-gray-500 cursor-default'
+                  : 'text-black hover:bg-gray-200'
               }`}
-            >
-              {page}
-            </button>
-          );
-        })}
-      </div>
+            disabled={page === '...'}
+          >
+            {page}
+          </button>
+        ))}
 
-      {/* Next Button */}
-      <button
-        onClick={() => changePage(activePage + 1)}
-        disabled={activePage === totalPages}
-        className={`flex items-center gap-2 px-3 py-1 rounded-md border text-sm ${
-          activePage === totalPages
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-            : 'hover:bg-gray-200 text-gray-700'
-        }`}
-      >
-        Next
-        <FiChevronRight className="h-4 w-4" />
-      </button>
+        {/* Right Arrow */}
+        <button
+          onClick={handleNext}
+          disabled={currentPage === totalPages}
+          className={`p-2 rounded ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-black hover:bg-gray-200'}`}
+        >
+          <FiChevronRight size={20} />
+        </button>
+      </div>
     </div>
   );
 };
 
 export default BasicPagination;
+
 
 
