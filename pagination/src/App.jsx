@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import BasicPagination from './component/BasicPagination'
 import OutlinedPagination from './component/OutlinedPagination'
+import RoundedPagination from './component/RoundedPagination'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,10 @@ function App() {
 
         <div className='m-8'>
           <OutlinedPagination />
+        </div>
+
+        <div className='m-8'>
+          <RoundedPagination />
         </div>
 
       </div>
