@@ -13,22 +13,23 @@ function App() {
     <>
       <h1 className='text-4xl text-center font-semibold m-4  underline'>Reusable Pagination Components</h1>
 
-      <div className='m-8'>
-        <h1 className='text-center text-2xl'>Basic Pagination </h1>
-
+    
         <div className='m-8'>
+           <h1 className='text-center text-2xl'>Basic Pagination </h1>
           <BasicPagination />
         </div>
 
         <div className='m-8'>
+           <h1 className='text-center text-2xl'>Outlined Pagination </h1>
           <OutlinedPagination />
         </div>
 
         <div className='m-8'>
+          <h1 className='text-center text-2xl'>Rounded Pagination </h1>
           <RoundedPagination />
         </div>
 
-      </div>
+      
 
     </>
   )
