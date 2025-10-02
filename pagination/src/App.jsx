@@ -6,6 +6,7 @@ import BasicPagination from './component/BasicPagination'
 import OutlinedPagination from './component/OutlinedPagination'
 import RoundedPagination from './component/RoundedPagination'
 import PaginationSize from './component/PaginationSize'
+import ButtonPagination from './component/ButtonPagination'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +34,12 @@ function App() {
         <div className='m-8'>
           <h1 className='text-center text-2xl'>Pagination Size</h1>
           <PaginationSize/>
+        </div>
+      
+        <div className='m-8'>
+          <h1 className='text-center text-2xl'>Buttons Pagination</h1>
+          <p className='text-center text-gray-400'>You can optionally enable first-page and last-page buttons, or disable the previous-page and next-page buttons.</p>
+          <ButtonPagination/>
         </div>
 
       
