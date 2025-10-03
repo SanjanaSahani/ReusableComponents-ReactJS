@@ -7,6 +7,7 @@ import OutlinedPagination from './component/OutlinedPagination'
 import RoundedPagination from './component/RoundedPagination'
 import PaginationSize from './component/PaginationSize'
 import ButtonPagination from './component/ButtonPagination'
+import TablePagination from './component/TablePagination'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,7 +43,10 @@ function App() {
           <ButtonPagination/>
         </div>
 
-      
+       <div className='m-8'>
+          <h1 className='text-center text-2xl'>Table Pagination</h1>
+          <TablePagination/>
+        </div>
 
     </>
   )
