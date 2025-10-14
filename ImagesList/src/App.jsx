@@ -6,6 +6,7 @@ import StandardImageList from './components/StandardImageList'
 import QuiltedImageList from './components/QuiltedImageList'
 import WovenImageList from './components/WovenImageList'
 import MasonryImageList from './components/MasonryImageList'
+import ImageListItemBar from './components/ImageListItemBar'
 
 const images = [
   'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=164&h=164&fit=crop&auto=format&dpr=2',
@@ -57,6 +58,14 @@ function App() {
         <h1 className='text-center text-2xl'>Masonry Images List</h1>
         <div className='flex items-center justify-center bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 cursor-pointer'>
           <MasonryImageList images={images} />
+        </div>
+      </div>
+
+      
+      <div className='m-8 '>
+        <h1 className='text-center text-2xl'>ImageList With Title Bars</h1>
+        <div className='flex items-center justify-center bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 cursor-pointer'>
+          <ImageListItemBar images={images} />
         </div>
       </div>
 
