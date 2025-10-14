@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiInfo } from 'react-icons/fi';
 
 const itemData = [
   {
@@ -62,15 +63,15 @@ const itemData = [
     author: '@southside_customs',
   },
 ];
-
+// make some changes in it 
 function ImageListItemBar() {
-  return (
-    <div className="max-h-[450px] w-[35%] overflow-y-scroll p-4">
-      <div className="grid grid-cols-2 gap-1 auto-rows-auto">
+ return (
+    <div className="max-h-[450px] w-[35%]  overflow-y-scroll p-2 bg-white">
+      <div className="grid grid-cols-2 gap-2 auto-rows-fr">
         {itemData.map((item, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded aspect-square"
+            className="relative overflow-hidden  aspect-[4/3]  shadow-sm"
           >
             <img
               src={item.img}
@@ -78,9 +79,14 @@ function ImageListItemBar() {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs px-4 py-2">
-              <div className="font-semibold text-xl">{item.title}</div>
-              <div className="text-[10px]">{item.author}</div>
+            {/* Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-black text-white px-2 py-1.5 flex flex-col justify-end">
+              <div className="text-base font-semibold leading-4">{item.title}</div>
+              <div className="text-xs opacity-80">{item.author}</div>
+            </div>
+            {/* Info icon */}
+            <div className="absolute bottom-1.5 right-2 text-black font-bold text-md text-2xl opacity-80 bg-gray-100 rounded-full">
+              <FiInfo />
             </div>
           </div>
         ))}
