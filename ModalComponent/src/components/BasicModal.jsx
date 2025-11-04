@@ -7,7 +7,7 @@ const BasicModal = ({title, text}) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="mt-6 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700"
+        className="mt-6 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 cursor-pointer"
       >
         Open Modal
       </button>
