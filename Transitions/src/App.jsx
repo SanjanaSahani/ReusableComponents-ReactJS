@@ -3,6 +3,7 @@ import BasicTransition from './components/BasicTransition'
 import GrowTransition from './components/GrowTransition'
 import SlideTransition from './components/SlideTransition'
 import ZoomTransition from './components/ZoomTransition'
+import AddTransitionGroup from './components/AddTransitionGroup'
 
 function App() {
 
@@ -28,6 +29,11 @@ function App() {
        <div className='m-8'>
         <h1 className='text-center text-2xl p-4'>Zoom Transition</h1>
         <ZoomTransition/>
+      </div>
+
+       <div className='m-8'>
+        <h1 className='text-center text-2xl p-4'>Add Items Transition</h1>
+        <AddTransitionGroup/>
       </div>
 
     </>
