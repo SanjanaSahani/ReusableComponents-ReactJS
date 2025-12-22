@@ -1,5 +1,6 @@
 import './App.css'
 import AppBarWithMenu from './components/AppBarWithMenu'
+import AppBarWithResponsiveMenu from './components/AppBarWithResponsiveMenu'
 import BasicAppbar from './components/BasicAppbar'
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
         <div className='mt-8 bg-blue-50 rounded-xl shadow-md p-4'>
         <h1 className='text-center text-2xl p-4 underline'>AppBar With Profile</h1>
         <AppBarWithMenu/>
+      </div>
+
+      <div className='mt-8 bg-blue-50 rounded-xl shadow-md p-4'>
+        <h1 className='text-center text-2xl p-4 underline'>AppBar With Responsive Menu</h1>
+        <AppBarWithResponsiveMenu/>
       </div>
     </>
   )
