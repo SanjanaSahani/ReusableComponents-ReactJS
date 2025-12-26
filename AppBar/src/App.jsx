@@ -4,6 +4,7 @@ import AppBarWithPrimarySearch from './components/AppBarWithPrimarySearch'
 import AppBarWithResponsiveMenu from './components/AppBarWithResponsiveMenu'
 import AppBarWithSearch from './components/AppBarWithSearch'
 import BasicAppbar from './components/BasicAppbar'
+import BottomAppBar from './components/BottomAppBar'
 
 function App() {
 
@@ -34,6 +35,11 @@ function App() {
       <div className='mt-8 bg-blue-50 rounded-xl shadow-md p-4'>
         <h1 className='text-center text-2xl p-4 underline'>AppBar With Primary Search Menu</h1>
         <AppBarWithPrimarySearch />
+      </div>
+
+       <div className='mt-8 bg-blue-50 rounded-xl shadow-md p-4'>
+        <h1 className='text-center text-2xl p-4 underline'>Bottom App Bar </h1>
+        <BottomAppBar/>
       </div>
     </>
   )
