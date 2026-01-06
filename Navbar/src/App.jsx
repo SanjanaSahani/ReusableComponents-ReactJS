@@ -5,7 +5,7 @@ import CenterLogoNavbar from './components/CenterLogoNavbar';
 import CTANavbar from './components/CTANavbar';
 import TransparentNavbar from './components/TransparentNavbar';
 import Hero from './components/Hero';
-
+import AuthNavbar from './components/AuthNavbar';
 
 function App() {
 
@@ -41,7 +41,10 @@ function App() {
         <Hero/>
       </div>
 
-       
+       <div className='my-8 bg-blue-50 rounded-xl shadow-md p-4'>
+        <h1 className='text-center text-2xl p-4 underline'>AuthNavBar</h1>
+        <AuthNavbar logo="MyWebsite" menuItems={menu} />
+      </div>
 
     </>
   )
