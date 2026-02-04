@@ -1,6 +1,7 @@
 import './App.css'
 import BasicLoginPage from './components/BasicLoginPage'
 import NormalLoginPage from './components/NormalLoginPage'
+import RegistrationForm from './components/RegistrationForm'
 
 function App() {
   return (
@@ -20,6 +21,13 @@ function App() {
         <div className='p-4 flex items-center justify-center bg-linear-to-r from-blue-50 via-purple-50 to-pink-50 cursor-pointer'>
           <NormalLoginPage title="Employee Login" subtitle="Access your dashboard"
             onSubmit={(data) => console.log(data)} />
+        </div>
+      </div>
+
+      <div className='m-8 '>
+        <h1 className='text-center text-2xl'>Normal Login Page</h1>
+        <div className='p-4 flex items-center justify-center bg-linear-to-r from-blue-50 via-purple-50 to-pink-50 cursor-pointer'>
+          <RegistrationForm/>
         </div>
       </div>
 
