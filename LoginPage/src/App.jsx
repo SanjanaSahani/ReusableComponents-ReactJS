@@ -25,7 +25,7 @@ function App() {
       </div>
 
       <div className='m-8 '>
-        <h1 className='text-center text-2xl'>Normal Login Page</h1>
+        <h1 className='text-center text-2xl'>Registration Form</h1>
         <div className='p-4 flex items-center justify-center bg-linear-to-r from-blue-50 via-purple-50 to-pink-50 cursor-pointer'>
           <RegistrationForm/>
         </div>
